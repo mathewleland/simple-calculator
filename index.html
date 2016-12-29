@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple JS Calculator</title>
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!--Font Awesome (not needed for this app)-->
+  <!-- <script src="https://use.fontawesome.com/f9ff2609a9.js"></script> -->
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/roboto.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css">
+
+  <style>
+  body {
+    background-color: #d3d3d3;
+  }
+  #container {
+    background-color: #1A1A59;
+    height: 373px;
+    width: 260px;
+    margin: 30px auto;
+    color: #8A8EBF;
+    font-size: 22px;
+    border-radius: 45px 25px;
+  }
+
+  #display {
+    background-color: #414687;
+    height: 33%;
+    width: 100%;
+    text-align: right;
+    color: #DCDCDC;
+    font-size: 56px;
+    padding: 20px 20px 0 10px;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .button {
+    height: 50px;
+    width: 65px;
+    margin: 0;
+    display: inline;
+    border: none;
+    background: none;
+    text-align: center;
+    float: left;
+    padding-top: 9px;
+  }
+
+  .button:hover {
+    background-color: #ffe45d;
+    cursor: pointer;
+  }
+
+  .double {
+    width: 130px;
+  }
+
+  #equals {
+    height: 100px;
+    width: 65px;
+    float: right;
+    display: inline-block;
+    margin-right: 0px;
+    background-color: #ff5d93;
+    font-size: 60px;
+    color: #ffe45d;
+  }
+
+  .well {
+    max-width: 500px;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container container-fluid">
+  <div class="well">
+    <h2> Simple Javascript Calculator</h2>
+  </div>
+  <div id="container">
+
+
+    <div id="display"> Test me</div>
+
+    <div class="button double" id="clear"> CLEAR </div>
+    <div class="button quarter" id="divide">&divide</div>
+    <div class="button quarter" id="multiply">x</div>
+    <div class="button quarter number">7</div>
+    <div class="button quarter number">8</div>
+    <div class="button quarter number">9</div>
+    <div class="button quarter" id="subtract">-</div>
+    <div class="button quarter number">4</div>
+    <div class="button quarter number">5</div>
+    <div class="button quarter number">6</div>
+    <div class="button quarter" id="add">+</div>
+    <div class="button quarter number">1</div>
+    <div class="button quarter number">2</div>
+    <div class="button quarter number">3</div>
+    <div id="equals" class="button">=</div>
+    <div class="button double number">0</div>
+    <div class="button quarter number">.</div>
+
+  </div>
+
+  <footer class="well">
+    <small>
+      Made as a project for <a href="https://freecodecamp.com/mathewleland">Free Code Camp.</a>
+    </small>
+    <small>
+      See a full list of projects by <a href="github.com/mathewleland">Mathew Leland</a>
+    </small>
+  </footer>
+
+</div> <!--container fluid-->
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- JQuery  -->
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+<!-- Page specific JS and Material Design CDN links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
+<script src="js/calculator.js"></script>
+
+<script> $(function() { $.material.init(); }); </script>
+</body>
+
+
+</html>
