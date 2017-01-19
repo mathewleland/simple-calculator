@@ -1,15 +1,12 @@
-var currentNumber = '';
-var operators = ["+", "-", "*", "/"];
-var lastChar;
+let currentNumber = '';
+const operators = ["+", "-", "*", "/"];
+let lastChar;
 
-var numbers = document.getElementsByClassName('number');
-for (var i=0; i<numbers.length; i++) {
-  numbers[i].addEventListener('click', function(){
-    // if (display.innerHTML.length < 8) {
+let numbers = document.getElementsByClassName('number');
+for (let i=0; i<numbers.length; i++) {
+  numbers[i].addEventListener('click', function() { //cannot use arrow function here or this will inherit window as 'this'
       currentNumber += this.innerHTML;
       updateDisplay(currentNumber);
-    console.log(display);
-    // }
   })
 }
 
@@ -26,7 +23,7 @@ function updateDisplay(msg) {
 
 }
 
-document.getElementById("add").addEventListener('click', function() {
+document.getElementById("add").addEventListener('click', () => {
   lastChar = document.getElementById('display').innerHTML;
   lastChar = lastChar[lastChar.length-1];
   if (operators.indexOf(lastChar) == -1) {
@@ -40,7 +37,7 @@ document.getElementById("add").addEventListener('click', function() {
   }
 });
 
-document.getElementById("subtract").addEventListener('click', function() {
+document.getElementById("subtract").addEventListener('click', () => {
   lastChar = document.getElementById('display').innerHTML;
   lastChar = lastChar[lastChar.length-1];
   if (operators.indexOf(lastChar) == -1) {
@@ -54,7 +51,7 @@ document.getElementById("subtract").addEventListener('click', function() {
   }
 });
 
-document.getElementById("multiply").addEventListener('click', function() {
+document.getElementById("multiply").addEventListener('click', () => {
   lastChar = document.getElementById('display').innerHTML;
   lastChar = lastChar[lastChar.length-1];
   if (operators.indexOf(lastChar) == -1) {
@@ -68,7 +65,7 @@ document.getElementById("multiply").addEventListener('click', function() {
   }
 });
 
-document.getElementById("divide").addEventListener('click', function() {
+document.getElementById("divide").addEventListener('click', () => {
   lastChar = document.getElementById('display').innerHTML;
   lastChar = lastChar[lastChar.length-1];
   if (operators.indexOf(lastChar) == -1) {
@@ -83,14 +80,14 @@ document.getElementById("divide").addEventListener('click', function() {
 });
 
 
-document.getElementById("equals").addEventListener('click', function(){
+document.getElementById("equals").addEventListener('click', () => {
   if (typeof eval(currentNumber) == 'number') {
     currentNumber = eval(currentNumber);
     updateDisplay(currentNumber);
   } else updateDisplay("error");
 });
 
-document.getElementById("clear").addEventListener('click', function(){
+document.getElementById("clear").addEventListener('click', () => {
   currentNumber = '';
   updateDisplay(currentNumber);
 });
